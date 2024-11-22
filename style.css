@@ -1,0 +1,302 @@
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Gallery Grid Styling */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox Styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+}    
+
+/* General Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 218px;
+    background-color: #e7ae32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav a i {
+    margin-right: 10px;
+}
+
+.sidebar nav a:hover {
+    background-color: #f0b535;
+    color: #333;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.sidebar nav a.active {
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Styles */
+.content {
+    margin-left: 220px;
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding: 20px;*/
+}
+
+section h1 {
+    font-size: 3em;
+    color: #333;
+}
+
+/* Home Section Styling */
+#home {
+    background: linear-gradient(-180deg, #ffffff, #ffffff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 40px;*/
+}
+
+/* Section Colors */
+#about-me {
+    background-color: #fff;
+}
+
+#portfolio {
+    background-color: #eaeaea;
+}
+
+#commission-work {
+    background-color: #ffffff;
+}
+
+#contact {
+    height: 30vh;
+    background-color: #ddd;
+}
+
+/* Commission Work Form */
+#commission-work form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#commission-work form input,
+#commission-work form textarea,
+#commission-work form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+#commission-work form button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+#commission-work form button:hover {
+    background-color: #d0942b;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    .profile-img {
+        margin-bottom: 0;
+    }
+
+    .sidebar nav a {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    section {
+        padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+
+    section h1 {
+        font-size: 2.5em; /* Smaller font size for headings */
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller grid items */
+    }
+
+    .profile-img {
+        width: 100px; /* Smaller profile image */
+        height: 100px;
+    }
+
+    .sidebar nav a {
+        font-size: 1em; /* Smaller font size for links */
+        margin: 0 5px; /* Adjust margin */
+    }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 576px) {
+    .sidebar {
+        padding: 10px; /* Less padding on mobile */
+    }
+
+    .content {
+        margin-left: 0; /* No margin for content */
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller grid items */
+    }
+
+    section h1 {
+        font-size: 2em; /* Further reduce heading size */
+    }
+
+    section h3, section h4 {
+        font-size: 1.2em; /* Smaller font size for subheadings */
+    }
+
+    #commission-work form {
+        width: 100%; /* Full width for form */
+    }
+
+    #commission-work form input,
+    #commission-work form textarea,
+    #commission-work form button {
+        font-size: 0.9em; /* Smaller font size for form elements */
+    }
+
+    .close {
+        font-size: 1.5em; /* Smaller close button on mobile */
+    }
+
+    .hero-text {
+        font-size: 0.8em; /* Smaller hero text */
+    }
+}
