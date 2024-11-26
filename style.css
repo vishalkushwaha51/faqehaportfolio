@@ -57,7 +57,7 @@
     color: #fff;
     cursor: pointer;
     z-index: 1000;
-}    
+}
 
 /* General Styles */
 body,
@@ -151,13 +151,18 @@ section h1 {
     align-items: center;
     /*padding: 40px;*/
 }
-.hero-text{
-    max-width: 80%; 
-    font-size: x-large; "
+
+.hero-text {
+    max-width: 80%;
+    font-size: x-large;
+    "
+
 }
+
 .img img {
     max-width: 100%;
 }
+
 /* Section Colors */
 #about-me {
     background-color: #fff;
@@ -228,6 +233,7 @@ section h1 {
         margin-left: 0;
     }
 }
+
 /* Medium Devices (Tablets) */
 @media (max-width: 768px) {
     .sidebar {
@@ -244,99 +250,164 @@ section h1 {
     }
 
     section {
-        padding: 40px 10px; /* Adjust padding for smaller screens */
+        padding: 40px 10px;
+        /* Adjust padding for smaller screens */
     }
 
     section h1 {
-        font-size: 2.5em; /* Smaller font size for headings */
+        font-size: 2.5em;
+        /* Smaller font size for headings */
+    }
+    #cv {
+        text-align: center;
     }
 
+    #cv h1 {
+        font-size: 2em;
+        margin: 20px auto;
+    }
+
+    #cv img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        filter: drop-shadow(0 0 10px #000000);
+    }
+
+
+
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller grid items */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        /* Smaller grid items */
     }
 
     .profile-img {
-        width: 100px; /* Smaller profile image */
+        width: 100px;
+        /* Smaller profile image */
         height: 100px;
     }
 
     .sidebar nav a {
-        font-size: 1em; /* Smaller font size for links */
-        margin: 0 5px; /* Adjust margin */
+        font-size: 1em;
+        /* Smaller font size for links */
+        margin: 0 5px;
+        /* Adjust margin */
     }
 }
 
 /* Small Devices (Mobile Phones) */
 /* Small Devices (Mobile Phones) */
 @media (max-width: 600px) {
-    .img img{
+    .img img {
         display: none;
     }
+
     .sidebar {
         height: auto;
-        padding: 10px; /* Less padding on mobile */
+        padding: 10px;
+        /* Less padding on mobile */
     }
 
     .content {
-        margin-left: 0; /* No margin for content */
+        margin-left: 0;
+        /* No margin for content */
     }
 
     /* Adjust Gallery Grid for Small Screens */
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
-        gap: 10px; /* Reduce gap between images */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 images per row */
+        gap: 10px;
+        /* Reduce gap between images */
     }
 
     section h1 {
-        font-size: 2em; /* Further reduce heading size */
+        font-size: 2em;
+        /* Further reduce heading size */
     }
 
-    section h3, section h4 {
-        font-size: 1.2em; /* Smaller font size for subheadings */
+    section h3,
+    section h4 {
+        font-size: 1.2em;
+        /* Smaller font size for subheadings */
     }
 
     #commission-work form {
-        width: 100%; /* Full width for form */
+        width: 100%;
+        /* Full width for form */
     }
 
     #commission-work form input,
     #commission-work form textarea,
     #commission-work form button {
-        font-size: 0.9em; /* Smaller font size for form elements */
+        font-size: 0.9em;
+        /* Smaller font size for form elements */
     }
 
     .close {
-        font-size: 2.5em; /* Smaller close button on mobile */
+        font-size: 2.5em;
+        /* Smaller close button on mobile */
     }
 
     .hero-text {
-        font-size: 0.8em; /* Smaller hero text */
+        font-size: 0.8em;
+        /* Smaller hero text */
     }
 
     /* Home Section Adjustments */
     #home {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center align */
-        padding: 20px; /* Add padding */
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center align */
+        padding: 20px;
+        /* Add padding */
     }
 
     .hero-text {
-        max-width: 90%; /* Limit width */
-        text-align: center; /* Center text */
+        max-width: 90%;
+        /* Limit width */
+        text-align: center;
+        /* Center text */
     }
 
     .img img {
-        width: 100%; /* Make image responsive */
-        height: auto; /* Maintain aspect ratio */
-        max-width: 300px; /* Limit the max width */
-        margin: 20px 0; /* Add margin for spacing */
+        width: 100%;
+        /* Make image responsive */
+        height: auto;
+        /* Maintain aspect ratio */
+        max-width: 300px;
+        /* Limit the max width */
+        margin: 20px 0;
+        /* Add margin for spacing */
     }
 
     /* About Me Section Adjustments */
     #about-me img {
-        width: 100%; /* Make image responsive */
-        height: auto; /* Maintain aspect ratio */
-        max-width: 300px; /* Limit the max width */
+        width: 100%;
+        /* Make image responsive */
+        height: auto;
+        /* Maintain aspect ratio */
+        max-width: 300px;
+        /* Limit the max width */
+    }
+    
+    #cv h1 {
+        position: relative;
+        font-size: 1.5em ;
+        left: -13%;
+        margin: 5px auto;
+        
+        
+
+
+    }
+
+    #cv img {
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        filter: drop-shadow(0 0 5px #000000);
+        padding: 20px;
     }
 }
-
