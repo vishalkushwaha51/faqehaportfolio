@@ -28,7 +28,24 @@
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
-
+#btm{
+    
+    border-radius: 8px;
+     background-color: #e7ae32;
+     margin-left: 200px;
+     margin-top: 40px;
+     filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+     border-color: #e7ae32;
+     
+     
+}
+#btm:hover{
+    
+    border-color: #000000;
+    background: #000000;
+   
+ 
+}
 /* Lightbox Styling */
 .lightbox {
     display: none;
@@ -409,5 +426,9 @@ section h1 {
         margin-left: 0;
         filter: drop-shadow(0 0 5px #000000);
         padding: 20px;
+    }
+    #btm{
+        margin-left: 40%;
+        margin-bottom: 30%;
     }
 }
